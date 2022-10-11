@@ -25,3 +25,7 @@ However if we move our mouse on the Y axis, meaning looking up or down, we don't
 only the camera.
 
 ![image](https://user-images.githubusercontent.com/79841064/195071112-8c679eaa-0267-4c59-920c-b3631f83ccee.png)
+
+
+Limit the camera's rotation to 180 degrees to avoid clamping (flipping the camera to a point behind the player).
+Add script to Main Camera = mouseLook.
