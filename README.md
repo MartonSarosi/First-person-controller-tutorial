@@ -10,3 +10,8 @@ Add a plane to the scene for the player to walk on, and create an empty game obj
 add component: character controller, change radius to 0.6, height to 3.8 in Char con.
 Add a capsule as a child to FPP and change scale to 1.2, 1.9, 1.2. Remove capsule collider because character controller acts as a collider.
 Optional: add two new materials, make the ground brown and the player blue.
+Drag the Main Camera under the FPP. Reset the transform of the camera and move it up almost to the top of the player but still leaving a bit of space so that if we jump into a ceiling, the camera doesn't clip through. Make sure that the camera is inside our capsule object so that the capsule is not visible to the camera itself.
+
+## 2. Looking around
+
+If we look around horizontally we want our player to rotate around the Y axis. ![image](https://user-images.githubusercontent.com/79841064/195070189-b084a72a-4ccb-40ef-92bc-111cef569c98.png)
