@@ -15,9 +15,12 @@ Drag the Main Camera under the FPP. Reset the transform of the camera and move i
 ## 2. Looking around
 
 If we move our mouse on the X axis, meaning looking around horizontally we want our player to rotate around the Y axis.
+
 ![image](https://user-images.githubusercontent.com/79841064/195070189-b084a72a-4ccb-40ef-92bc-111cef569c98.png)
 
-However if we move our mouse on the Y axis, meaning looking up or down, we don't want our entire player to rotate ![image](https://user-images.githubusercontent.com/79841064/195070828-61cf84f0-f0d2-41d2-afac-dd3dd6e18b33.png) 
+However if we move our mouse on the Y axis, meaning looking up or down, we don't want our entire player to rotate
+
+![image](https://user-images.githubusercontent.com/79841064/195070828-61cf84f0-f0d2-41d2-afac-dd3dd6e18b33.png) 
 
 only the camera.
 
