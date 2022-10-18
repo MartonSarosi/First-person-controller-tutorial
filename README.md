@@ -29,7 +29,7 @@ only the camera.
 
 We also want to limit the camera's rotation to 180 degrees, this is called clamping (flipping the camera to a point behind the player).
 
-It's time to add a script to Main Camera = mouseLook.
+It's time to add a script to the Main Camera called mouseLook.
 In  the script, first we will assign a public float for our mouse sensitivity, a transform for our body and a float called xRotation that will help us with clamping.
 ```.cs
 public float mouseSens;
@@ -72,3 +72,7 @@ void Start()
 ```
 Finally, we are just going to assign a value to our sensitivity and drag our FPP from the Hierarchy into the Player Body slot.
 ![image](https://user-images.githubusercontent.com/79841064/196407291-10a7c1a9-7738-4399-a90f-b8b1bfd2d1fa.png)
+
+## 3. Movement
+
+To implement the movement we wil make a script called playerMovement and attach it to the First Person Player.
