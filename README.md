@@ -27,6 +27,25 @@ only the camera.
 ![image](https://user-images.githubusercontent.com/79841064/195071112-8c679eaa-0267-4c59-920c-b3631f83ccee.png)
 
 
-Limit the camera's rotation to 180 degrees to avoid clamping (flipping the camera to a point behind the player).
+We also want to limit the camera's rotation to 180 degrees to avoid clamping (flipping the camera to a point behind the player).
 
-Add script to Main Camera = mouseLook.
+It's time to add a script to Main Camera = mouseLook.
+In  the script, first we will assign a public float for our mouse sensitivity, a transform for our body and a float called xRotation that will help us with clamping.
+```.cs
+public float mouseSens;
+public Transform playerBody;
+float xRotation = 0f;
+```
+and than we will have these lines so that we can rotate our camera on the X and the Y axis.
+```.cs
+void Update()
+{
+        float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
+
+        playerBody.Rotate(Vector3.up * mouseX);
+
+        xRotation -= mouseY;
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+}        
+```
