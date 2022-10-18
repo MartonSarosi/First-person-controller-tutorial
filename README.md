@@ -28,4 +28,5 @@ only the camera.
 
 
 Limit the camera's rotation to 180 degrees to avoid clamping (flipping the camera to a point behind the player).
+
 Add script to Main Camera = mouseLook.
