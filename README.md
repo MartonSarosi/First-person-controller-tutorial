@@ -138,3 +138,5 @@ Finally we will be making sure that if we are on the ground our velocity stays 0
             velocity.y = -2f;
         }
 ```
+Now inside the Unity editor first we will create a new layer called Ground, then we will go to our player, drag our GroundCheck object into the Ground Check slot and set the Ground Mask to Ground.
+![image](https://user-images.githubusercontent.com/79841064/197752676-e9c15d3f-0437-400a-9aff-eae3e87e7523.png)
