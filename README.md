@@ -75,4 +75,20 @@ Finally, we are just going to assign a value to our sensitivity and drag our FPP
 
 ## 3. Movement
 
-To implement the movement we wil make a script called playerMovement and attach it to the First Person Player.
+To implement the movement we will make a script called playerMovement and attach it to the First Person Player. We will need a referance to our player controller, a speed value, get some input on the horizontal and vertical axises and of course use Time.deltaTime so that the speed which the player is moving by won't be affected by how good their computer specs are.
+```cs
+public CharacterController controller;
+
+    public float speed;
+
+    // Update is called once per frame
+    void Update()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * x + transform.forward * z;
+
+        controller.Move(move * speed * Time.deltaTime);
+    }
+    ```
