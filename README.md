@@ -93,3 +93,30 @@ public CharacterController controller;
     }
 ```
 Now will just have to set our speed in the Unity editor and also drag our controller in the right slot. ![image](https://user-images.githubusercontent.com/79841064/197738582-ae32bcb1-c675-4d2e-9f34-c691db7c2cb8.png)
+
+## 4. Gravity
+
+First add some stairs and a slope to our scene that we can walk up.
+![image](https://user-images.githubusercontent.com/79841064/197741693-d4f07430-1e89-4f03-ada4-9c6dbaa87146.png)
+
+We will need to set the Step Offset in the Character Controller to 0.7 so we actually walk up the stairs.
+![image](https://user-images.githubusercontent.com/79841064/197742133-03d9e58a-b29a-49c8-85bf-709d50b6cf13.png)
+
+Now we're able to walk up the stairs but there's no gravity applied.
+![image](https://user-images.githubusercontent.com/79841064/197742768-44629be9-7fa5-462f-8827-92af1f407cd0.png)
+
+We will start by implementing our velocity (This all goes into the playerMovement script)
+First add a reference for the velocity and  assign a float for the gravity at the top.
+```cs
+    Vector3 velocity;
+    public float gravity = -9.81f;
+```
+Now inside Update we will increase our velocity on the y axis.
+```cs
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity *Time.deltaTime);
+```
+At this point we are constantly building up velocity so we're going to add an empty game object called GroundCheck to the Player.
+![image](https://user-images.githubusercontent.com/79841064/197746491-3dba82da-f618-45ba-b194-dd01692a78df.png)
+
+Now going back to our playerMovement script we will need a reference for our groundCheck, a float for our groundDistance, a LayerMask because we want to control what kind of objects to check for and finally we will assign a bool that will store if we are grounded or not.
