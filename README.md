@@ -120,3 +120,21 @@ At this point we are constantly building up velocity so we're going to add an em
 ![image](https://user-images.githubusercontent.com/79841064/197746491-3dba82da-f618-45ba-b194-dd01692a78df.png)
 
 Now going back to our playerMovement script we will need a reference for our groundCheck, a float for our groundDistance, a LayerMask because we want to control what kind of objects to check for and finally we will assign a bool that will store if we are grounded or not.
+```cs
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+    bool isGrounded;
+```
+Now in our update we will add a line to create a small invisible sphere at the bottom of our Player, with the radius specified and if it collides with anything that is in our groundMask, than isGrounded is going to be true.
+```cs
+    isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+```
+Finally we will be making sure that if we are on the ground our velocity stays 0, but because our sphere might register before we completely hit the ground we will actually set the velocity to -2 and this is all in the Update function.
+
+```cs
+        if(isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+```
