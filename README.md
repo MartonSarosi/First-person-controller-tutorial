@@ -152,6 +152,6 @@ Then we will put this if statement inside our Update function to get the player 
 ```cs
 if(Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity)
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
 ```
