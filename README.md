@@ -91,5 +91,5 @@ public CharacterController controller;
 
         controller.Move(move * speed * Time.deltaTime);
     }
-    ```
-    Now will just have to set our speed in the Unity editor and also drag our controller in the right slot. ![image](https://user-images.githubusercontent.com/79841064/197738582-ae32bcb1-c675-4d2e-9f34-c691db7c2cb8.png)
+```
+Now will just have to set our speed in the Unity editor and also drag our controller in the right slot. ![image](https://user-images.githubusercontent.com/79841064/197738582-ae32bcb1-c675-4d2e-9f34-c691db7c2cb8.png)
