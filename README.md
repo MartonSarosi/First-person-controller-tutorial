@@ -138,5 +138,20 @@ Finally we will be making sure that if we are on the ground our velocity stays 0
             velocity.y = -2f;
         }
 ```
-Now inside the Unity editor first we will create a new layer called Ground, then we will go to our player, drag our GroundCheck object into the Ground Check slot and set the Ground Mask to Ground.
+Now inside the Unity editor first we will create a new layer called Ground, then we will go to our player, drag our GroundCheck object into the Ground Check slot and set the Ground Mask to Ground. You should also select the plane and the stairs and slope and change their layer to ground. (Baisically anything that the player is going to be walking on).
+
 ![image](https://user-images.githubusercontent.com/79841064/197752676-e9c15d3f-0437-400a-9aff-eae3e87e7523.png)
+
+## 5. Jumping
+
+First we will assign a new float called jumpHeight that we'll be able to change inside the edior.
+```cs
+    public float jumpHeight;
+```
+Then we will put this if statement inside our Update function to get the player jumping.
+```cs
+if(Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity)
+        }
+```
