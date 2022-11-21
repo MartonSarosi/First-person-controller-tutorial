@@ -43,4 +43,25 @@ First we will declare some variables.
     public Transform secondTP;
 ```
 
-Next we will create an OnTriggerEnter function to check if the player has come in contact with one of the teleporters, and if it has, we will change the player's location to the other teleporter location.
+Next we will create an OnTriggerEnter function to check if the player has come in contact with one of the teleporters, and they it have, we will change the player's location to the other teleporter location.
+```.cs
+private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("TP"))
+        {
+            thePlayer.transform.position = secondTP.transform.position;
+        }
+
+        if (collision.gameObject.CompareTag("SecondTP"))
+        {
+            thePlayer.transform.position = startTP.transform.position;
+        }
+
+    }
+```
+
+## 3. Finishing up
+
+Coming back to our scene, now we need to assign a couple things in the inspector. Go to your player/character controller where the script is and assing the player and the TP locations in their respective slots.
+
+![image](https://user-images.githubusercontent.com/79841064/203151579-2bb4c57a-7601-46b9-b0e8-d043c146c2f6.png)
