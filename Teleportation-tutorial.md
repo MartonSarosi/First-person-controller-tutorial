@@ -2,7 +2,7 @@
 
 This tutorial will take you through making a teleporter in Unity.
 
-## Setting up the scene.
+## 1. Setting up the scene
 
 For this tutorial I will assume you have your own character controller and an environment (at the very least a plane) where you can walk around.
 First, we will add a cube to our scene. I will name this cube TP. You can resize this cube or remove the mesh renderer depending on your needs. I will resize it to make it look like a platform and make it purple.
@@ -26,3 +26,13 @@ Move TP2 into a different location, however far you want.
 
 ![image](https://user-images.githubusercontent.com/79841064/203149263-f5143d4a-0542-494d-a3e7-a768c695831f.png)
 
+## 2. Making the script
+
+Create a new script and attach it to your player. I will call the script Teleport.
+Inside the script we can delete the Start and Update functions.
+First we will declare some variables.
+```.cs
+    public GameObject thePlayer;
+    public Transform startTP;
+    public Transform secondTP;
+```
