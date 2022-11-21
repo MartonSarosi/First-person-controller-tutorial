@@ -1,4 +1,4 @@
-# First-person-controller-tutorial
+# First-person-controller tutorial
 
 This shows how to make a simple first person controller in Unity 3D.
 
