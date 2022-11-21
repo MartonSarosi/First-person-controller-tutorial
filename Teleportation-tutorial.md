@@ -26,13 +26,21 @@ Move TP2 into a different location, however far you want.
 
 ![image](https://user-images.githubusercontent.com/79841064/203149263-f5143d4a-0542-494d-a3e7-a768c695831f.png)
 
+Lastly, we will give TP a tag of TP, and TP2 a tag of SecondTP.
+
+![image](https://user-images.githubusercontent.com/79841064/203150880-f40e3d57-5660-4101-9f33-946dc8e3e564.png)
+![image](https://user-images.githubusercontent.com/79841064/203150910-82d0abc3-105c-43ee-a094-66577c9f0c80.png)
+
 ## 2. Making the script
 
 Create a new script and attach it to your player. I will call the script Teleport.
 Inside the script we can delete the Start and Update functions.
+
 First we will declare some variables.
 ```.cs
     public GameObject thePlayer;
     public Transform startTP;
     public Transform secondTP;
 ```
+
+Next we will create an OnTriggerEnter function to check if the player has come in contact with one of the teleporters, and if it has, we will change the player's location to the other teleporter location.
