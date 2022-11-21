@@ -156,4 +156,4 @@ if(Input.GetButtonDown("Jump") && isGrounded)
         }
 ```
 
-Now we have a working first-person controller that can look around, move in any direction and jump.
+That will do it for this tutorial. Now we have a working first-person controller that can look around, move in any direction and jump.
