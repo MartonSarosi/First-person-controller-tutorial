@@ -22,3 +22,7 @@ Now we can duplicate TP, call it TP2 and call TP location in TP2 TP location2, l
 
 ![image](https://user-images.githubusercontent.com/79841064/203148935-9540eb51-824e-45d0-a440-4d64defd4209.png)
 
+Move TP2 into a different location, however far you want.
+
+![image](https://user-images.githubusercontent.com/79841064/203149263-f5143d4a-0542-494d-a3e7-a768c695831f.png)
+
