@@ -1,4 +1,4 @@
-# First-person-controller tutorial
+# First-person controller tutorial
 
 This shows how to make a simple first person controller in Unity 3D.
 
@@ -155,3 +155,5 @@ if(Input.GetButtonDown("Jump") && isGrounded)
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
 ```
+
+Now we have a working first-person controller that can look around, move in any direction and jump.
