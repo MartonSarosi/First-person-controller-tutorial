@@ -66,4 +66,4 @@ Coming back to our scene, now we need to assign a couple things in the inspector
 
 ![image](https://user-images.githubusercontent.com/79841064/203151579-2bb4c57a-7601-46b9-b0e8-d043c146c2f6.png)
 
-We're good to go, if you press play, you should see that if you walk onto the purple platform (TP), it will teleport you onto the other yellow platform (TP loc2), and vice versa.
+We're good to go. If you press play, you should see that if you walk onto the purple platform (TP), it will teleport you onto the other yellow platform (TP loc2), and vice versa.
