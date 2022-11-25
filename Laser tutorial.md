@@ -90,7 +90,7 @@ First we will need to assign startPoint in the inspector. For this we will creat
 
 ![image](https://user-images.githubusercontent.com/79841064/204008126-92e953b7-2ec5-4146-99e7-1703b3010cf7.png)
 
-Finally, we need to adjust a couple settings for the LineRenderer. First we need to decrease the width, for me it is as close to 0 as posibble but for you it could be different, and we need to asign a material for the LineRenderer.
+Finally, we need to adjust a couple settings for the LineRenderer. First we need to decrease the width, for me it is as close to 0 as posibble but for you it could be different, and we need to assign a material for the LineRenderer.
 
 ![image](https://user-images.githubusercontent.com/79841064/204008469-b51ff259-9a4d-4658-a2df-92ac92039b60.png)
 
