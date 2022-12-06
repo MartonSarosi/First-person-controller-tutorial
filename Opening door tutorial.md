@@ -84,3 +84,7 @@ Then we need to detect the player entering and leaving the collider.
 Coming back to Unity, we just need to put our script on the Door_Hinge object, drag Door_Hinge into the animator slot, and put the Player tag on your character controller if you haven't already done so.
 
 ![image](https://user-images.githubusercontent.com/79841064/205908413-87d89dd1-2c6f-422e-a763-fc096e12ee55.png) 
+
+Now the door should open whenever you come into the collider and close when you leave it.
+
+![image](https://user-images.githubusercontent.com/79841064/205909577-823ac57b-b32f-45db-b0cb-fa16207b6f5f.png)
