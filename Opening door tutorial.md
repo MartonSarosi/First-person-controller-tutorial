@@ -50,11 +50,31 @@ For the one between Door_Open and Door_Closed, we set it to false.
 First we will need to decleare the animator and reference it in the Start function.
 
 ```.cs
-public Animator Animator;
+    public Animator Animator;
     
     // Start is called before the first frame update
     void Start()
     {
-        Animator = GetComponentInChildren<Animator>();
+        Animator = GetComponent<Animator>();
+    }
+```
+
+Then we need to detect the player entering and leaving the collider.
+
+```.cs
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag =="Player")
+        {
+            Animator.SetBool("PlayerOpen", true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            Animator.SetBool("PlayerOpen", false);
+        }
     }
 ```
