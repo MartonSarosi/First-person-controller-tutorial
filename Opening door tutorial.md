@@ -9,9 +9,13 @@ We will create a couple cubes and a door object in our scene.
 
 ![image](https://user-images.githubusercontent.com/79841064/205897528-287d487a-6c03-4e64-a71b-bdec584b3eda.png)
 
-It is important to also create a Door_Hinge empty gameobject. The door itself will sit on this so we can rotate it when we want the door to open. Don't forget to set the point of the Door_Hinge as pivot and not centre in the top right corner of the scene window. We will also add a Box Collider to Door_Hinge, we will use this collider to detect the player and open the door if we walk into the collider. We need to set this collider to trigger and make it about this big:
+It is important to also create a Door_Hinge empty gameobject. The door itself will sit on this so we can rotate it when we want the door to open. Don't forget to set the point of the Door_Hinge as pivot and not centre in the top right corner of the scene window.
 
 ![image](https://user-images.githubusercontent.com/79841064/205898169-4f2efadb-1c88-4540-9394-a4127f4645b7.png)
+
+We will also add a Box Collider to Door_Hinge, we will use this collider to detect the player and open the door if we walk into the collider. We need to set this collider to trigger and make it about this big:
+
+![image](https://user-images.githubusercontent.com/79841064/205906382-56d5333d-ca9b-4a33-9cd6-4a4dbd99390a.png)
 
 ## 2. Creating the animations
 
@@ -43,4 +47,14 @@ For the one between Door_Open and Door_Closed, we set it to false.
 
 ## 3. Writing the script
 
-First we will need
+First we will need to decleare the animator and reference it in the Start function.
+
+```.cs
+public Animator Animator;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        Animator = GetComponentInChildren<Animator>();
+    }
+```
