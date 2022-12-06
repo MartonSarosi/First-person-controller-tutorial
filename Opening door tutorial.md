@@ -19,3 +19,24 @@ Now we will need to create an animation controller for the Door_Hinge object, an
 
 ![image](https://user-images.githubusercontent.com/79841064/205899221-dfc75276-8590-4bdb-a16d-e6045c7a3071.png)
 
+Now we will create a new animation, call it Door_Open, and copy the keyframe from the Door_Opening animation at the 1 minute mark, and paste it in for the Door_Open animation at the 0 second mark.
+
+![image](https://user-images.githubusercontent.com/79841064/205899887-80134735-a6d2-40b2-a8c3-04a0ba0a2675.png)
+
+We will do the same thing for the last animation, Door_Closed. For this we copy the first keyframe from Door_Opening, and paste it in for Door_Closed.
+
+In the animator window we need to set the Door_Closed animation as the default state, and make transitions from one to another like so:
+
+![image](https://user-images.githubusercontent.com/79841064/205900440-1848aea5-3779-48ac-90a0-16000c8c2bc7.png)
+
+We will also create a new parameter, a bool, and called it PlayerOpen.
+
+![image](https://user-images.githubusercontent.com/79841064/205900666-63038cf5-693e-4544-bd78-ddd5bf079a80.png)
+
+We need to add this parameter as a condition to the first, third transition. For the one between Door_Closed and Door_Opening we leave it on true.
+
+![image](https://user-images.githubusercontent.com/79841064/205901115-647a9d1f-f174-41ee-b579-2aaa8544aede.png)
+
+For the one between Door_Open and Door_Closed, we set it to false.
+
+![image](https://user-images.githubusercontent.com/79841064/205901250-641de0b9-f057-4b71-9e2e-3cf886798db3.png)
