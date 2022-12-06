@@ -1,6 +1,6 @@
 # Opening door tutorial
 
-This tutorial will show you how to make a door open on trigger or... by using a script and animations.
+This tutorial will show you how to make a door open on trigger by using a script and animations.
 
 ## 1. Setting up the scene
 
@@ -9,7 +9,7 @@ We will create a couple cubes and a door object in our scene.
 
 ![image](https://user-images.githubusercontent.com/79841064/205897528-287d487a-6c03-4e64-a71b-bdec584b3eda.png)
 
-It is important to also create a Door_Hinge empty gameobject. The door itself will sit on this so we can rotate it when we want the door to open. Don't forget to set the point of the Door_Hinge as pivot and not centre in the top right corner of the scene window. 
+It is important to also create a Door_Hinge empty gameobject. The door itself will sit on this so we can rotate it when we want the door to open. Don't forget to set the point of the Door_Hinge as pivot and not centre in the top right corner of the scene window. We will also add a Box Collider to Door_Hinge, we will use this collider to detect the player and open the door if we walk into the collider. We need to set this collider to trigger and make it about this big:
 
 ![image](https://user-images.githubusercontent.com/79841064/205898169-4f2efadb-1c88-4540-9394-a4127f4645b7.png)
 
@@ -40,3 +40,7 @@ We need to add this parameter as a condition to the first, third transition. For
 For the one between Door_Open and Door_Closed, we set it to false.
 
 ![image](https://user-images.githubusercontent.com/79841064/205901250-641de0b9-f057-4b71-9e2e-3cf886798db3.png)
+
+## 3. Writing the script
+
+First we will need
